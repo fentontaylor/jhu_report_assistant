@@ -2,9 +2,9 @@ library(shiny)
 suppressMessages(library(stringi))
 suppressMessages(library(dplyr))
 
-ngrams_accuracy <- readRDS("data/ngrams_accuracy.rds")
-ngrams_speed <- readRDS("data/ngrams_speed.rds")
-topFive <- c("the", "to", "and", "a", "of")
+#New databases - Need to update algorithm
+ngrams_accuracy <- readRDS("data/all_ng_trim1.rds")
+ngrams_speed <- readRDS("data/all_ng_trim5.rds")
 shinyServer(function(input, output) {
    
     ngrams <- reactive({
